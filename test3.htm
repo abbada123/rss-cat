@@ -15,6 +15,11 @@
 fetch("https://www.raiplayradio.it/programmi/caterpillar/archivio/puntate/")
    .then(response => {
       console.log(response);
+      response.text();
+   }).then(codice => {
+      console.log(codice);
+    })
+  /*
       const parser = new DOMParser()
       const virtualDoc = parser.parseFromString(response.text(), 'text/html')
       window.alert(response.text());
@@ -25,6 +30,7 @@ fetch("https://www.raiplayradio.it/programmi/caterpillar/archivio/puntate/")
       //console.log(doc);
       
    })
+  */
    .catch(error => console.log("Si è verificato un errore!"))
   
 </script>
