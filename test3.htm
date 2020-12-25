@@ -17,7 +17,7 @@ fetch("https://www.raiplayradio.it/programmi/caterpillar/archivio/puntate/")
       console.log(response);
       const parser = new DOMParser()
       const virtualDoc = parser.parseFromString(response.text(), 'text/html')
-      var x = document.getElementsByClassName("listaAudio ");
+      var x = document.getElementsByClassName("row");
       console.log(x);
       //x[0].innerHTML = "Hello World!";
       console.log((x.length));
