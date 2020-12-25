@@ -12,13 +12,19 @@
 </div>
  
 <script>
-fetch("https://www.raiplayradio.it/programmi/caterpillar/archivio/puntate/")
+let response = await fetch("https://www.raiplayradio.it/programmi/caterpillar/archivio/puntate/")
+console.log(response);
+let text = await response.text();
+console.log(text);
+
+  /*
    .then(response => {
       console.log(response);
       response.json();
    }).then(codice => {
       console.log(codice);
     })
+    */
   /*
       const parser = new DOMParser()
       const virtualDoc = parser.parseFromString(response.text(), 'text/html')
